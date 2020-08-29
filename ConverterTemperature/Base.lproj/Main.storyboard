@@ -15,36 +15,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="5QF-ix-GMg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="V5U-0b-O2N">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNH-Tr-fDE">
-                                <rect key="frame" x="66" y="187" width="282" height="29"/>
+                                <rect key="frame" x="66" y="141" width="282" height="29"/>
                                 <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYI-i9-KsP">
-                                <rect key="frame" x="177.5" y="513" width="59.5" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="A2e-u5-fWl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" minimumValueImage="sun.min" catalog="system" maximumValueImage="sun.min.fill" translatesAutoresizingMaskIntoConstraints="NO" id="sHW-du-KPf">
-                                <rect key="frame" x="64" y="433" width="286" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" minimumValueImage="sun.min" catalog="system" maximumValueImage="sun.min.fill" translatesAutoresizingMaskIntoConstraints="NO" id="vJL-CG-A2d">
+                                <rect key="frame" x="58" y="433" width="298" height="31"/>
                                 <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="maximumTrackTintColor" red="0.82956201419999998" green="0.090880526929999997" blue="0.50761736260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0º C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXs-GP-6pd">
-                                <rect key="frame" x="175" y="304" width="75" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="Zxr-FU-bD3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0º F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="518-t2-Gcj">
+                                <rect key="frame" x="178" y="537" width="59" height="38"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0º C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-qY-ww0">
+                                <rect key="frame" x="178" y="319" width="59" height="38"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -52,20 +46,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" red="0.82956201419999998" green="0.090880526929999997" blue="0.50761736260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sHW-du-KPf" firstAttribute="top" secondItem="VXs-GP-6pd" secondAttribute="bottom" constant="50" id="499-X7-4Lr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5QF-ix-GMg" secondAttribute="trailing" id="4f8-Yk-7jy"/>
-                            <constraint firstItem="5QF-ix-GMg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="8QB-Eh-W3f"/>
-                            <constraint firstItem="sHW-du-KPf" firstAttribute="trailing" secondItem="hNH-Tr-fDE" secondAttribute="trailing" id="BMB-HM-Muk"/>
-                            <constraint firstItem="VXs-GP-6pd" firstAttribute="centerX" secondItem="hNH-Tr-fDE" secondAttribute="centerX" id="Fv0-BU-IQq"/>
-                            <constraint firstItem="sHW-du-KPf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="Fwa-jR-490"/>
-                            <constraint firstItem="sHW-du-KPf" firstAttribute="centerY" secondItem="5QF-ix-GMg" secondAttribute="centerY" id="Jut-pd-rWb"/>
-                            <constraint firstItem="hNH-Tr-fDE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="Udb-UU-571"/>
-                            <constraint firstItem="5QF-ix-GMg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c8R-uE-QFp"/>
-                            <constraint firstItem="mYI-i9-KsP" firstAttribute="top" secondItem="sHW-du-KPf" secondAttribute="bottom" constant="50" id="ds7-Gn-caj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="5QF-ix-GMg" secondAttribute="top" constant="88" id="iHp-cO-YGi"/>
-                            <constraint firstItem="VXs-GP-6pd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mBM-6y-StF"/>
-                            <constraint firstItem="mYI-i9-KsP" firstAttribute="centerX" secondItem="sHW-du-KPf" secondAttribute="centerX" id="mSN-Kx-fM0"/>
-                            <constraint firstItem="hNH-Tr-fDE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x3V-Uk-mxF"/>
+                            <constraint firstItem="V5U-0b-O2N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="5HZ-wD-Apc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V5U-0b-O2N" secondAttribute="trailing" id="6wN-qK-HMM"/>
+                            <constraint firstItem="518-t2-Gcj" firstAttribute="top" secondItem="vJL-CG-A2d" secondAttribute="bottom" constant="98" id="FT6-sD-rsK"/>
+                            <constraint firstItem="vJL-CG-A2d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I4e-pn-aph"/>
+                            <constraint firstItem="vJL-CG-A2d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Llm-9e-ahD"/>
+                            <constraint firstItem="hNH-Tr-fDE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mak-Ce-K6W"/>
+                            <constraint firstItem="vJL-CG-A2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="SRe-ib-eLg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="V5U-0b-O2N" secondAttribute="top" constant="88" id="YaB-DQ-U3A"/>
+                            <constraint firstItem="hNH-Tr-fDE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="cUm-rb-Vbx"/>
+                            <constraint firstItem="518-t2-Gcj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i8g-0t-tYU"/>
+                            <constraint firstItem="efa-qY-ww0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="k90-X9-eR4"/>
+                            <constraint firstItem="vJL-CG-A2d" firstAttribute="top" secondItem="efa-qY-ww0" secondAttribute="bottom" constant="123" id="uI1-HF-cWw"/>
+                            <constraint firstItem="V5U-0b-O2N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wbT-Ph-ULf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -81,7 +74,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ce1-hR-4Hl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zvb-qP-8R5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
