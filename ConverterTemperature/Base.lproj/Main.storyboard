@@ -18,9 +18,23 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="V5U-0b-O2N">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNH-Tr-fDE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="hNH-Tr-fDE">
                                 <rect key="frame" x="66" y="141" width="282" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0º C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfG-KY-1nh">
+                                <rect key="frame" x="178" y="273" width="59" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0º F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="518-t2-Gcj">
+                                <rect key="frame" x="178" y="537" width="59" height="38"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -30,35 +44,25 @@
                                 <color key="maximumTrackTintColor" red="0.82956201419999998" green="0.090880526929999997" blue="0.50761736260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0º F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="518-t2-Gcj">
-                                <rect key="frame" x="178" y="537" width="59" height="38"/>
-                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0º C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-qY-ww0">
-                                <rect key="frame" x="178" y="319" width="59" height="38"/>
-                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" red="0.82956201419999998" green="0.090880526929999997" blue="0.50761736260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="V5U-0b-O2N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="5HZ-wD-Apc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V5U-0b-O2N" secondAttribute="trailing" id="6wN-qK-HMM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V5U-0b-O2N" secondAttribute="trailing" id="6wN-qK-HMM">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-44"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="-44"/>
+                            </constraint>
                             <constraint firstItem="518-t2-Gcj" firstAttribute="top" secondItem="vJL-CG-A2d" secondAttribute="bottom" constant="98" id="FT6-sD-rsK"/>
                             <constraint firstItem="vJL-CG-A2d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I4e-pn-aph"/>
                             <constraint firstItem="vJL-CG-A2d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Llm-9e-ahD"/>
-                            <constraint firstItem="hNH-Tr-fDE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mak-Ce-K6W"/>
                             <constraint firstItem="vJL-CG-A2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="SRe-ib-eLg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="V5U-0b-O2N" secondAttribute="top" constant="88" id="YaB-DQ-U3A"/>
-                            <constraint firstItem="hNH-Tr-fDE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="cUm-rb-Vbx"/>
                             <constraint firstItem="518-t2-Gcj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i8g-0t-tYU"/>
-                            <constraint firstItem="efa-qY-ww0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="k90-X9-eR4"/>
-                            <constraint firstItem="vJL-CG-A2d" firstAttribute="top" secondItem="efa-qY-ww0" secondAttribute="bottom" constant="123" id="uI1-HF-cWw"/>
-                            <constraint firstItem="V5U-0b-O2N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wbT-Ph-ULf"/>
+                            <constraint firstItem="V5U-0b-O2N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wbT-Ph-ULf">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-44"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="-44"/>
+                            </constraint>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -66,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="93.75"/>
+            <point key="canvasLocation" x="1039.9553571428571" y="92.753623188405811"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F18-Bb-Mbc">
@@ -74,7 +78,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ce1-hR-4Hl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zvb-qP-8R5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
