@@ -70,7 +70,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Info" image="info.circle.fill" catalog="system" id="mKU-ht-Emr">
                             <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
-                                <segue destination="xfE-fc-o5c" kind="presentation" id="tAV-J2-Vep"/>
+                                <segue destination="xfE-fc-o5c" kind="presentation" identifier="InfoSegue" id="tAV-J2-Vep"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="dark mode" image="moon.circle.fill" catalog="system" id="omC-6Q-GZT">
@@ -106,6 +106,9 @@
                                     <constraint firstAttribute="height" constant="40" id="egw-Bu-7xe"/>
                                 </constraints>
                                 <state key="normal" image="clear.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="xfE-fc-o5c" eventType="touchUpInside" id="bCc-Kz-yCb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-3b-UbJ">
                                 <rect key="frame" x="175" y="410.5" width="64.5" height="21"/>
@@ -113,7 +116,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hJ-ok-9cj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Desc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hJ-ok-9cj">
                                 <rect key="frame" x="65" y="787" width="285" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -132,6 +135,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cq7-qF-VMT"/>
                     </view>
+                    <connections>
+                        <outlet property="appDescLabel" destination="3hJ-ok-9cj" id="Vik-KK-I2B"/>
+                        <outlet property="appInfoLabel" destination="Qef-3b-UbJ" id="mWt-tS-wru"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHb-jB-HeJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,7 +155,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="s7q-AZ-vRU">
                                 <rect key="frame" x="142" y="405.5" width="130" height="85.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7Z-BE-qk8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is On" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7Z-BE-qk8">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
