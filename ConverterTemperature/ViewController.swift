@@ -12,7 +12,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var celsiusLabel: UILabel!
     @IBOutlet weak var fahrenheitLabel: UILabel!
-    @IBOutlet weak var tempSlider: UISlider!
+    
+    @IBOutlet weak var tempSlider: UISlider!{
+        didSet{
+            tempSlider.minimumValue = 0
+            tempSlider.maximumValue = 99
+            tempSlider.value = 0
+            
+        }
+    }
     
     
  
@@ -24,6 +32,16 @@ class ViewController: UIViewController {
         
     }
 
-
+    @IBAction func sliderValueChanged(_ sender: UISlider){
+        
+        print("value: ", Int(sender.value))
+        let tempCelsius = Int(sender.value)
+        celsiusLabel.text = "\(tempCelsius) ºC"
+        
+        let tempFahr = Int((sender.value * 9 / 5) + 32)
+        fahrenheitLabel.text = "\(tempFahr) ºF"
+        
+    }
+    
 }
 
