@@ -18,16 +18,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="V5U-0b-O2N">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="hNH-Tr-fDE">
-                                <rect key="frame" x="66" y="141" width="282" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0º C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfG-KY-1nh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0º C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfG-KY-1nh">
                                 <rect key="frame" x="178" y="273" width="59" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,47 +30,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" minimumValueImage="sun.min" catalog="system" maximumValueImage="sun.min.fill" translatesAutoresizingMaskIntoConstraints="NO" id="vJL-CG-A2d">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" minimumValueImage="sun.min" catalog="system" maximumValueImage="sun.min.fill" translatesAutoresizingMaskIntoConstraints="NO" id="vJL-CG-A2d" userLabel="Temp Slider">
                                 <rect key="frame" x="58" y="433" width="298" height="31"/>
                                 <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="maximumTrackTintColor" red="0.82956201419999998" green="0.090880526929999997" blue="0.50761736260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="hNH-Tr-fDE">
+                                <rect key="frame" x="66" y="168" width="282" height="29"/>
+                                <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" red="0.82956201419999998" green="0.090880526929999997" blue="0.50761736260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="V5U-0b-O2N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="5HZ-wD-Apc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V5U-0b-O2N" secondAttribute="trailing" id="6wN-qK-HMM">
-                                <variation key="heightClass=compact-widthClass=compact" constant="-44"/>
-                                <variation key="heightClass=compact-widthClass=regular" constant="-44"/>
-                            </constraint>
+                            <constraint firstAttribute="bottomMargin" secondItem="V5U-0b-O2N" secondAttribute="bottom" constant="-83" id="0P0-f0-0pp"/>
+                            <constraint firstItem="hNH-Tr-fDE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="F8D-md-16J"/>
                             <constraint firstItem="518-t2-Gcj" firstAttribute="top" secondItem="vJL-CG-A2d" secondAttribute="bottom" constant="98" id="FT6-sD-rsK"/>
+                            <constraint firstItem="V5U-0b-O2N" firstAttribute="centerX" secondItem="hNH-Tr-fDE" secondAttribute="centerX" id="H5B-R2-3KQ"/>
                             <constraint firstItem="vJL-CG-A2d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I4e-pn-aph"/>
                             <constraint firstItem="vJL-CG-A2d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Llm-9e-ahD"/>
+                            <constraint firstItem="V5U-0b-O2N" firstAttribute="centerX" secondItem="IfG-KY-1nh" secondAttribute="centerX" id="PWc-NL-tUB"/>
                             <constraint firstItem="vJL-CG-A2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="SRe-ib-eLg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="V5U-0b-O2N" secondAttribute="top" constant="88" id="YaB-DQ-U3A"/>
+                            <constraint firstItem="IfG-KY-1nh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="133" id="WTa-pu-ttt"/>
                             <constraint firstItem="518-t2-Gcj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i8g-0t-tYU"/>
-                            <constraint firstItem="V5U-0b-O2N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wbT-Ph-ULf">
-                                <variation key="heightClass=compact-widthClass=compact" constant="-44"/>
-                                <variation key="heightClass=compact-widthClass=regular" constant="-44"/>
-                            </constraint>
+                            <constraint firstItem="V5U-0b-O2N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nbP-Uo-PkT"/>
+                            <constraint firstItem="V5U-0b-O2N" firstAttribute="centerX" secondItem="vJL-CG-A2d" secondAttribute="centerX" id="u77-kK-IUR"/>
+                            <constraint firstItem="V5U-0b-O2N" firstAttribute="centerY" secondItem="vJL-CG-A2d" secondAttribute="centerY" id="xIr-O1-Cvp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="C F Converter" id="Vjp-er-Zrc"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="C F Converter" id="Vjp-er-Zrc">
+                        <barButtonItem key="leftBarButtonItem" title="Info" id="mKU-ht-Emr"/>
+                        <barButtonItem key="rightBarButtonItem" title="dark mode" id="omC-6Q-GZT"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="IfG-KY-1nh" id="dff-DA-30X"/>
+                        <outlet property="fahrenheitLabel" destination="518-t2-Gcj" id="etF-Tq-BdO"/>
+                        <outlet property="tempSlider" destination="vJL-CG-A2d" id="aj5-IA-hjv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.9553571428571" y="92.753623188405811"/>
+            <point key="canvasLocation" x="1039.1304347826087" y="92.410714285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F18-Bb-Mbc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ce1-hR-4Hl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zvb-qP-8R5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Zvb-qP-8R5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
